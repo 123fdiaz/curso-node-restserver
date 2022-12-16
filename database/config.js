@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 const  dbConnection = async() => {
 
     try {
+        mongoose.set('strictQuery', true)
 
         await mongoose.connect(process.env.MONGODB_CNN, {
-            keepAlive: 1,
-            useNewUrlParser: true//,
-            /*useUnifiedTopoLogy: true*//*,
+            useNewUrlParser: true,
+            useUnifiedTopoLogy: true/*,
             useCreateIndex: true,
             useFindAndModify: false*/
 
