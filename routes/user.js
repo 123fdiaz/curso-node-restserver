@@ -23,7 +23,7 @@ router.get('/',userGet);
     validarCampos
   ],userPut);
 
-  router.Post('/',[
+  router.post('/',[
     check('nombre', 'el nombre es obligatorio').not().isEmpty(),
     check('password', 'la contraseña es obligatorio').isLength({min: 6}),
     check('correo', 'el correo no el valido').isEmail(),
