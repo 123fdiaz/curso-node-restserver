@@ -9,7 +9,7 @@ const bcryptjs = require('bcryptjs');
 const res = response;
 
 const userGet = async(req, res) => {
-
+  console.log('entre por get');
     const {limite = 5, desde = 0} = req.query;
 
     const [total,usuarios] = await Promise.all([
@@ -48,6 +48,7 @@ const userGet = async(req, res) => {
 
   const userPost = async (req, res) => {
 
+    console.log('entre por post');
     const {nombre, correo, password, role} = req.body;
     const usuario = new Usuario({nombre, correo, password, role});
 
