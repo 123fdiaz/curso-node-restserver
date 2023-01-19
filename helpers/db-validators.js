@@ -50,6 +50,16 @@ const esRolValido = async(role = '') => {
     }
   }
 
+  const coleccionesPerminitas = async(coleccion = '', colecciones =[]) =>{
+
+    const incluida = colecciones.includes(coleccion);
+
+    if(!incluida){
+
+      throw new Error('no existe la collecion seleccionado');
+    }
+  }
+
   
 
   module.exports ={
@@ -57,5 +67,6 @@ const esRolValido = async(role = '') => {
     existeEmail,
     existeUsuarioId,
     existeCategoriaId,
-    existeProductoId
+    existeProductoId,
+    coleccionesPerminitas
   }
